@@ -11,7 +11,7 @@ from habits.validators import IsTooLong
 
 
 class HabitSerializer(serializers.ModelSerializer):
-    has_auxiliary_habits = SerializerMethodField()
+    has_support_habits = SerializerMethodField()
     support_habit = SupportHabitShortSerializer(read_only=True, many=True)
     has_reward = SerializerMethodField()
     habit_reward = RewardShortSerializer(read_only=True, many=True)
@@ -21,7 +21,7 @@ class HabitSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'user', 'action', 'action_time', 'action_place', 'duration', 'regularity', 'is_public',
                   'has_support_habits', 'support_habit', 'has_reward', 'habit_reward',)
 
-    def get_has_auxiliary_habits(self, habit):
+    def get_has_support_habits(self, habit):
         if SupportHabit.objects.filter(main_habit=habit).exists():
             return True
         return False

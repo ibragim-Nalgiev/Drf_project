@@ -25,7 +25,7 @@ class SupportHabitCreateSerializer(serializers.ModelSerializer):
             )
         if habit.habit_reward.all().exists():
             raise ValidationError({
-                "result": 'This habit already has a reward! You can assign either a reward or an support habit'})
+                "result": 'This habit already has a reward! You can assign either a reward or a support habit'})
         return super().create(validated_data)
 
 

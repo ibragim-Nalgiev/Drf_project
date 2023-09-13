@@ -8,7 +8,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python", "Drf_project.py"]
+CMD ["python", "manage.py", "runserver"]
 
 
 

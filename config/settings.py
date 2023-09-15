@@ -93,8 +93,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'drf_habits',
         'USER': 'postgres',
-        'HOST': 'localhost',
-        'PORT': 5432,
+        'HOST': 'db',
         'PASSWORD': os.getenv('DATABASES_PASSWORD'),
 
     }

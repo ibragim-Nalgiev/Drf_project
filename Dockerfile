@@ -1,6 +1,8 @@
 FROM python:3.11-slim
 
-WORKDIR /Drf_project
+ENV PYTHONUNBUFFERED 1
+
+WORKDIR /app
 
 COPY requirements.txt .
 

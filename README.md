@@ -39,7 +39,7 @@
 1. Установить docker, выбрав соответствующую ОС. https://docs.docker.com/get-docker/
 
 
-2. Клонировать в IDE проект https://github.com/Marat-Shainurov/drf_habits.git на вашу локальную машину.
+2. Клонировать в IDE проект https://github.com/ibragim-Nalgiev/Drf_project.git на вашу локальную машину.
 
 
 3. Запустить процесс создания и запуска образа приложения, с помощью команд:

@@ -90,11 +90,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
         'NAME': 'drf_habits',
         'USER': 'postgres',
         'HOST': 'db',
-        'PASSWORD': os.getenv('DATABASES_PASSWORD'),
+        'PASSWORD': os.getenv('PASSWORD'),
 
     }
 }
@@ -158,14 +158,14 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",
+    "http://localhost:3000",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:8000",
+    "http://localhost:3000",
 ]
 
-CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = True
 
 CELERY_BROKER_URL = "redis://redis:6379/0"
 CELERY_RESULT_BACKEND = "redis://redis:6379/0"

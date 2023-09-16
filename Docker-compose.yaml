@@ -6,9 +6,10 @@ services:
     image: postgres
     container_name: db_app
     environment:
-      PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_USER: postgres
       POSTGRES_DB: drf_habits
       POSTGRES_PASSWORD: DATABASES_PASSWORD
+      PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - postgres_data:/var/lib/postgresql/data/pgdata
     ports:

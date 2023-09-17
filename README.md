@@ -47,6 +47,8 @@
 
   docker-compose build
   docker-compose up
+
+
 4. Изучить документацию проекта (swagger или redoc):
 
 

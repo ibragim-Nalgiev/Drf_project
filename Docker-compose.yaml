@@ -4,11 +4,13 @@ services:
 
   db:
     image: postgres
-    container_name: db_app
+    container_name: db
+    env_file:
+      - .env
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: drf_habits
-      POSTGRES_PASSWORD: DATABASES_PASSWORD
+      POSTGRES_PASSWORD: PASSWORD
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - postgres_data:/var/lib/postgresql/data/pgdata
@@ -84,3 +86,5 @@ volumes:
   redis_data:
   celery_data:
   celery_beat_data:
+  db:
+    driver: local

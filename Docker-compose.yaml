@@ -5,13 +5,11 @@ services:
   db:
     image: postgres
     container_name: db_app
-    env_file:
-      - .env
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_DB: drf_habits
-      POSTGRES_PASSWORD: PASSWORD
       PGDATA: /var/lib/postgresql/data/pgdata
+      POSTGRES_DB: drf_habits
+      POSTGRES_PASSWORD: mysecretpassword
     volumes:
       - postgres_data:/var/lib/postgresql/data/pgdata
     ports:
